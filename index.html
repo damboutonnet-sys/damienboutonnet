@@ -44,11 +44,28 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .page { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
 
 header { margin-bottom: 3.5rem; }
+.head-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+.portrait {
+  margin: 0;
+  width: min(100%, 17rem);
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 900 / 1348;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+@media (min-width: 46rem) {
+  .head-grid { grid-template-columns: minmax(0, 1fr) 13rem; align-items: end; gap: 2rem; }
+  .portrait { width: 100%; }
+}
 .name {
   margin: 0;
   font-weight: 800;
   font-variation-settings: "wdth" 62;
-  font-size: clamp(3.4rem, 15vw, 7.5rem);
+  font-size: clamp(3rem, 12vw, 5rem);
   line-height: 0.86;
   letter-spacing: -0.01em;
 }
@@ -116,8 +133,15 @@ footer { margin-top: 4rem; color: var(--soft); font-size: 0.9rem; }
 <main class="page">
 
 <header>
-  <h1 class="name"><span>Damien</span><span>Boutonnet</span></h1>
-  <p class="roles">Professeur de théâtre au CRR du Grand Avignon<br>Comédien-musicien et contrebassiste</p>
+  <div class="head-grid">
+    <div>
+      <h1 class="name"><span>Damien</span><span>Boutonnet</span></h1>
+      <p class="roles">Professeur de théâtre au CRR du Grand Avignon<br>Comédien-musicien et contrebassiste</p>
+    </div>
+    <figure class="portrait">
+      <img src="img/portrait.jpg" width="900" height="1348" alt="Portrait de Damien Boutonnet en noir et blanc, mains jointes, accoudé à une table.">
+    </figure>
+  </div>
   <div class="intro">
     <p>J'enseigne l'art dramatique du cycle 1 au cycle 3 : technique du corps et de la voix, interprétation, improvisation. Avant Avignon, j'ai reconstruit le département théâtre du conservatoire d'Aubagne.</p>
     <p>Depuis plus de vingt ans, je joue comme comédien-musicien au sein de compagnies conventionnées par la DRAC, en salle et dans l'espace public. Ce double parcours fonde ma manière d'enseigner : le corps, le souffle et la voix travaillés comme un instrument.</p>
