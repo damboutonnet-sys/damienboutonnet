@@ -207,3 +207,9 @@ footer p { margin: 0; }
 .project p { margin: 0 0 0.6rem; }
 
 
+
+.gallery-natural figcaption { margin-top: 0.25rem; font-size: 0.85rem; color: var(--soft); }
+@media (min-width: 46rem) {
+  .gallery-natural.three { grid-template-columns: repeat(3, 1fr); }
+}
+.gallery-natural.three figure:not(.wide) img { aspect-ratio: 4 / 3; object-fit: cover; }
