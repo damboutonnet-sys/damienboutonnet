@@ -197,3 +197,5 @@ footer p { margin: 0; }
 .gallery-natural figure { margin: 0; }
 .gallery-natural .wide { grid-column: 1 / -1; }
 .gallery-natural img { display: block; width: 100%; height: auto; }
+
+.section-note { margin: -0.5rem 0 1rem; color: var(--soft); max-width: 38rem; }
