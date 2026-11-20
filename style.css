@@ -206,25 +206,4 @@ footer p { margin: 0; }
 .project h3 { margin: 0 0 0.4rem; }
 .project p { margin: 0 0 0.6rem; }
 
-/* Accueil : entrées vers les pages */
-.doors { display: block; border-top: 1px solid var(--line); margin-top: 0.5rem; }
-.doors a {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.15rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink);
-  text-decoration: none;
-}
-.door-title {
-  font-weight: 800;
-  font-variation-settings: "wdth" 62;
-  font-size: clamp(2rem, 8vw, 2.75rem);
-  line-height: 1;
-}
-.door-text { color: var(--soft); max-width: 34rem; }
-.doors a:hover .door-title, .doors a:focus-visible .door-title { color: var(--accent); }
-@media (min-width: 46rem) {
-  .doors a { grid-template-columns: 20rem 1fr; align-items: baseline; gap: 2rem; }
-}
+
