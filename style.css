@@ -184,3 +184,5 @@ footer p { margin: 0; }
 
 .hero { margin: 1.5rem 0 0; }
 .hero img { display: block; width: 100%; height: auto; max-height: 26rem; object-fit: cover; }
+
+.guests-note { margin-top: 0.6rem !important; }
