@@ -186,3 +186,9 @@ footer p { margin: 0; }
 .hero img { display: block; width: 100%; height: auto; max-height: 26rem; object-fit: cover; }
 
 .guests-note { margin-top: 0.6rem !important; }
+
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
+.gallery figure { margin: 0; }
+.gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.side-photo { margin: 1.25rem 0 0; }
+.side-photo img { display: block; width: min(100%, 22rem); height: auto; }
