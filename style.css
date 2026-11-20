@@ -1,0 +1,156 @@
+:root {
+  --paper: #f3f4f1;
+  --ink: #1b2330;
+  --soft: #5b6472;
+  --line: #cfd3d6;
+  --accent: #2b4c8c;
+  --accent-soft: #e2e8f3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #171b22;
+    --ink: #e7e9ec;
+    --soft: #9aa3b0;
+    --line: #333a45;
+    --accent: #8fb0ee;
+    --accent-soft: #232c3c;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.page { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+/* Menu */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.nav .home {
+  font-weight: 700;
+  font-variation-settings: "wdth" 75;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav ul { list-style: none; display: flex; gap: 1.25rem; margin: 0; padding: 0; }
+.nav ul a { color: var(--soft); text-decoration: none; font-weight: 500; }
+.nav ul a:hover { color: var(--ink); }
+.nav ul a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+
+/* En-tête de l'accueil */
+header { margin-bottom: 3rem; }
+.head-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+.portrait { margin: 0; width: min(100%, 17rem); }
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 900 / 1348;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+@media (min-width: 46rem) {
+  .head-grid { grid-template-columns: minmax(0, 1fr) 13rem; align-items: end; gap: 2rem; }
+  .portrait { width: 100%; }
+}
+.name {
+  margin: 0;
+  font-weight: 800;
+  font-variation-settings: "wdth" 62;
+  font-size: clamp(3rem, 12vw, 5rem);
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+}
+.name span { display: block; }
+.roles {
+  margin: 1.25rem 0 0;
+  font-weight: 500;
+  font-variation-settings: "wdth" 85;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: var(--soft);
+}
+.intro { margin: 1.75rem 0 0; max-width: 36rem; }
+.intro p { margin: 0 0 0.8rem; }
+.contact { margin-top: 1.25rem; font-weight: 500; }
+
+/* Titre des pages intérieures */
+.page-title {
+  margin: 0 0 0.75rem;
+  font-weight: 800;
+  font-variation-settings: "wdth" 62;
+  font-size: clamp(2.75rem, 10vw, 4rem);
+  line-height: 0.9;
+}
+.lede { margin: 0 0 1rem; max-width: 36rem; color: var(--soft); font-size: 1.125rem; }
+
+section { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 2.75rem; }
+h2 {
+  margin: 0 0 1.25rem;
+  font-weight: 700;
+  font-variation-settings: "wdth" 75;
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+h3 { margin: 2rem 0 0.75rem; font-size: 1.0625rem; font-weight: 700; }
+
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+}
+.timeline li + li { border-top: 1px dashed var(--line); }
+.when {
+  font-variation-settings: "wdth" 75;
+  font-weight: 500;
+  color: var(--accent);
+  font-feature-settings: "tnum";
+}
+.what strong { font-weight: 700; }
+.what p { margin: 0.2rem 0 0; color: var(--soft); }
+
+.plain { margin: 0; padding-left: 1.1rem; }
+.plain li { margin: 0.45rem 0; }
+.plain li::marker { color: var(--accent); }
+.plain li p { margin: 0.1rem 0 0; color: var(--soft); }
+
+.guests {
+  margin: 0.5rem 0 0;
+  padding: 1rem 1.1rem;
+  background: var(--accent-soft);
+  border-radius: 4px;
+}
+.guests p { margin: 0; }
+
+footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--soft); font-size: 0.9rem; }
+footer p { margin: 0; }
+
+@media (max-width: 34rem) {
+  .page { padding-top: 1.25rem; }
+  .timeline li { grid-template-columns: 1fr; gap: 0.1rem; }
+}

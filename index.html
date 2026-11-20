@@ -8,129 +8,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400;62..100,500;62..100,700;62..100,800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --paper: #f3f4f1;
-  --ink: #1b2330;
-  --soft: #5b6472;
-  --line: #cfd3d6;
-  --accent: #2b4c8c;
-  --accent-soft: #e2e8f3;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #171b22;
-    --ink: #e7e9ec;
-    --soft: #9aa3b0;
-    --line: #333a45;
-    --accent: #8fb0ee;
-    --accent-soft: #232c3c;
-  }
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Archivo", system-ui, sans-serif;
-  font-variation-settings: "wdth" 100;
-  font-size: 1.0625rem;
-  line-height: 1.55;
-}
-a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
-a:hover { text-decoration-thickness: 2px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-.page { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
-
-header { margin-bottom: 3.5rem; }
-.head-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
-.portrait {
-  margin: 0;
-  width: min(100%, 17rem);
-}
-.portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 900 / 1348;
-  object-fit: cover;
-  filter: grayscale(1);
-}
-@media (min-width: 46rem) {
-  .head-grid { grid-template-columns: minmax(0, 1fr) 13rem; align-items: end; gap: 2rem; }
-  .portrait { width: 100%; }
-}
-.name {
-  margin: 0;
-  font-weight: 800;
-  font-variation-settings: "wdth" 62;
-  font-size: clamp(3rem, 12vw, 5rem);
-  line-height: 0.86;
-  letter-spacing: -0.01em;
-}
-.name span { display: block; }
-.roles {
-  margin: 1.25rem 0 0;
-  font-weight: 500;
-  font-variation-settings: "wdth" 85;
-  font-size: 1.25rem;
-  line-height: 1.35;
-  color: var(--soft);
-}
-.intro { margin: 1.75rem 0 0; max-width: 36rem; }
-.intro p { margin: 0 0 0.8rem; }
-.contact { margin-top: 1.25rem; font-weight: 500; }
-
-section { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 2.75rem; }
-h2 {
-  margin: 0 0 1.25rem;
-  font-weight: 700;
-  font-variation-settings: "wdth" 75;
-  font-size: 1.75rem;
-  line-height: 1.1;
-}
-h3 { margin: 2rem 0 0.75rem; font-size: 1.0625rem; font-weight: 700; }
-
-.timeline { list-style: none; margin: 0; padding: 0; }
-.timeline li {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr;
-  gap: 1rem;
-  padding: 0.6rem 0;
-}
-.timeline li + li { border-top: 1px dashed var(--line); }
-.when {
-  font-variation-settings: "wdth" 75;
-  font-weight: 500;
-  color: var(--accent);
-  font-feature-settings: "tnum";
-}
-.what strong { font-weight: 700; }
-.what p { margin: 0.2rem 0 0; color: var(--soft); }
-
-.plain { margin: 0; padding-left: 1.1rem; }
-.plain li { margin: 0.35rem 0; }
-.plain li::marker { color: var(--accent); }
-
-.guests {
-  margin: 0.5rem 0 0;
-  padding: 1rem 1.1rem;
-  background: var(--accent-soft);
-  border-radius: 4px;
-}
-.guests p { margin: 0; }
-
-footer { margin-top: 4rem; color: var(--soft); font-size: 0.9rem; }
-
-@media (max-width: 34rem) {
-  .page { padding-top: 2.5rem; }
-  .timeline li { grid-template-columns: 1fr; gap: 0.1rem; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main class="page">
+
+<nav class="nav" aria-label="Menu principal">
+  <ul>
+    <li><a href="./" aria-current="page">Enseignement</a></li>
+    <li><a href="theatre.html">Comédien</a></li>
+    <li><a href="musique.html">Musique</a></li>
+  </ul>
+</nav>
 
 <header>
   <div class="head-grid">
@@ -152,11 +41,12 @@ footer { margin-top: 4rem; color: var(--soft); font-size: 0.9rem; }
 <section aria-labelledby="enseignement">
   <h2 id="enseignement">Enseignement</h2>
   <ul class="timeline">
-    <li><span class="when">depuis 2024</span><div class="what"><strong>Conservatoire à Rayonnement Régional du Grand Avignon</strong><p>Professeur d'art dramatique, cycles 1 à 3 et parcours d'études. Création du cours d'improvisation (2024) et du cycle universitaire (2026), partenariats avec les théâtres d'Avignon.</p></div></li>
-    <li><span class="when">2018 – 2023</span><div class="what"><strong>Conservatoire d'Aubagne</strong><p>Professeur de théâtre. Reconstruction du département : éveil, initiation, cycles 1 à 3.</p></div></li>
+    <li><span class="when">depuis 2024</span><div class="what"><strong>Conservatoire à Rayonnement Régional du Grand Avignon</strong><p>Professeur d'art dramatique titulaire, cycles 1 à 3 et parcours d'études. Création du cours d'improvisation (2024) et du cycle universitaire (2026), partenariats avec les théâtres d'Avignon.</p></div></li>
+    <li><span class="when">2018 – 2023</span><div class="what"><strong>Conservatoire intercommunal d'Aubagne</strong><p>Professeur de théâtre titulaire. Reconstruction du département : éveil, initiation, cycles 1 à 3.</p></div></li>
     <li><span class="when">2021 – 2022</span><div class="what"><strong>ERACM, Cannes et Marseille</strong><p>Membre du jury du Diplôme d'État de professeur de théâtre.</p></div></li>
-    <li><span class="when">2007 – 2011</span><div class="what"><strong>Lyon, La Duchère, Saint-Fons</strong><p>Ateliers en milieu scolaire et associatif avec la compagnie Les arTpenteurs.</p></div></li>
-    <li><span class="when">2004</span><div class="what"><strong>Gazibul Théâtre, Saint-Brieuc</strong><p>Cours de théâtre pour amateurs et apprentis comédiens.</p></div></li>
+    <li><span class="when">2004 – 2017</span><div class="what"><strong>Ateliers théâtre à Rennes, Lyon et Marseille</strong><p>Associations, MJC, collèges, lycées, collectivités territoriales. À Lyon, ateliers dans les quartiers de La Duchère et Saint-Fons avec la compagnie Les arTpenteurs (2007-2011).</p></div></li>
+    <li><span class="when">Adultes</span><div class="what"><strong>AFPA de Rillieux-la-Pape, entreprises et mutuelles</strong><p>Formateur en prise de parole : préparation aux entretiens oraux, expression en public.</p></div></li>
+    <li><span class="when">2004 – 2007</span><div class="what"><strong><a href="https://www.gazibul.com/">Compagnie Gazibul</a>, Saint-Brieuc</strong><p>Comédien intervenant dans l'équipe pédagogique.</p></div></li>
     <li><span class="when">2002 – 2005</span><div class="what"><strong>Mouvances, Rennes</strong><p>Président bénévole de l'école de danse contemporaine et classique.</p></div></li>
     <li><span class="when">2001 – 2002</span><div class="what"><strong>Liban et Bénin</strong><p>Ateliers de théâtre en français avec des élèves d'écoles publiques à Hermel ; projet mêlant théâtre et soutien scolaire à Bohicon.</p></div></li>
   </ul>
@@ -167,49 +57,16 @@ footer { margin-top: 4rem; color: var(--soft); font-size: 0.9rem; }
   </div>
 </section>
 
-<section aria-labelledby="scene">
-  <h2 id="scene">Scène</h2>
-  <ul class="timeline">
-    <li><span class="when">depuis 2003</span><div class="what"><strong><a href="https://www.decorsonore.org/">Décor Sonore</a></strong><p>Comédien-musicien. Compagnie d'art sonore en espace public, conventionnée par la DRAC Île-de-France : <a href="https://www.decorsonore.org/creations/urbaphonix/">Urbaphonix</a>, <a href="https://www.decorsonore.org/creations/instrument-monument/">Instrument | Monument</a>.</p></div></li>
-    <li><span class="when">2002 – 2008</span><div class="what"><strong><a href="http://www.compagnie1310.com">Cie 13/10e en Ut</a></strong><p>Formation d'acteur puis comédien. Compagnie de théâtre contemporain conventionnée par la DRAC Bretagne. Gaspard de Peter Handke.</p></div></li>
-  </ul>
-</section>
-
-<section aria-labelledby="musique">
-  <h2 id="musique">Musique</h2>
-  <ul class="plain">
-    <li><strong>Anna Gruzina Quartet</strong>, jazz de composition</li>
-    <li>Quartet avec <strong>Thomas Bourgeois</strong> et <strong>Luke Darlison</strong></li>
-    <li><strong>Oni Giri</strong>, quintet de Rémi Denis, album <a href="https://onigiriquintet.bandcamp.com/album/le-jardin-des-r-ves">Le Jardin des rêves</a></li>
-    <li><strong>New Thing Septet</strong>, de Raphaël Imbert</li>
-    <li><strong>Gurumbé Project</strong>, de Gil Aniorte Paz</li>
-    <li><strong>Samar</strong>, de Jérôme Leroy</li>
-  </ul>
-</section>
-
 <section aria-labelledby="diplomes">
   <h2 id="diplomes">Diplômes</h2>
   <ul class="timeline">
+    <li><span class="when">2019</span><div class="what"><strong>DEM de contrebasse jazz</strong><p>Conservatoire de Marseille.</p></div></li>
+    <li><span class="when">2018</span><div class="what"><strong>Concours d'assistant territorial d'enseignement artistique</strong><p>Versailles.</p></div></li>
     <li><span class="when">2017</span><div class="what"><strong>Diplôme d'État de professeur de théâtre</strong><p>ERACM, après une préparation au TNP avec Alain Gintzburger.</p></div></li>
-    <li><span class="when">Master</span><div class="what"><strong>Études théâtrales</strong><p>Université de Lyon, sous la direction de Julie Sermon.</p></div></li>
-    <li><span class="when">Licences</span><div class="what"><strong>Sciences de l'éducation ; biologie</strong><p>Biologie à l'université Rennes 1.</p></div></li>
-    <li><span class="when">Musique</span><div class="what"><strong>DEM de contrebasse jazz, BEM de contrebasse classique</strong><p>Conservatoire de Marseille, après l'IMFP.</p></div></li>
-  </ul>
-</section>
-
-<section aria-labelledby="formation">
-  <h2 id="formation">Formation d'acteur</h2>
-  <ul class="timeline">
-    <li><span class="when">2002 – 2004</span><div class="what"><strong>Sylvain Ottavy</strong> et <strong>Frédérique Mingant</strong><p>Formation d'acteur au sein de la Cie 13/10e en Ut.</p></div></li>
-    <li><span class="when">2001 – 2004</span><div class="what"><strong>Emio Greco</strong>, <strong>Catherine Diverrès</strong>, <strong>Damien Jalet</strong><p>Stages de danse au TNB, après un cursus au conservatoire de Rennes.</p></div></li>
-    <li><span class="when">2005</span><div class="what"><strong>Charlie Windelschmidt</strong> et <strong>Roland Fichet</strong><p>Stage national de réalisation, Brest.</p></div></li>
-    <li><span class="when">2006</span><div class="what"><strong>Robin Renucci</strong>, <strong>Serge Lipszyc</strong>, <strong>Raphaël Almosni</strong>, <strong>Pierre Vial</strong>, <strong>Alan Boone</strong>, <strong>Gérard Chabanier</strong><p>Rencontres internationales de théâtre en Corse, ARIA : masque, diction, voix, burlesque.</p></div></li>
-    <li><span class="when">2006</span><div class="what"><strong>Bob McAndrew</strong><p>Le jeu devant la caméra, Paris.</p></div></li>
-    <li><span class="when">2006</span><div class="what"><strong>Antoine Le Menestrel</strong><p>Théâtre acrobatique.</p></div></li>
-    <li><span class="when">2009</span><div class="what"><strong>Marcial Di Fonzo Bo</strong><p>Une poétique de la complexité, Lyon.</p></div></li>
-    <li><span class="when">2010</span><div class="what"><strong>Philippe Calvario</strong> et <strong>Thierry de Peretti</strong><p>Interpréter Koltès et Copi, Paris.</p></div></li>
-    <li><span class="when">2011</span><div class="what"><strong>Martine Rateau</strong><p>Clown, Cie Oposito.</p></div></li>
-    <li><span class="when">2012</span><div class="what"><strong>Pierre Pilatte</strong><p>Détour dans l'espace public, Lyon.</p></div></li>
+    <li><span class="when">2017</span><div class="what"><strong>BEM de contrebasse classique</strong><p>Conservatoire de Marseille.</p></div></li>
+    <li><span class="when">2010</span><div class="what"><strong>Master 2 en études théâtrales, mention bien</strong><p>Université Lumière Lyon 2, sous la direction de Julie Sermon.</p></div></li>
+    <li><span class="when">2003</span><div class="what"><strong>Licence de sciences de l'éducation, mention bien</strong><p>Université Rennes 2.</p></div></li>
+    <li><span class="when">2002</span><div class="what"><strong>Licence de biologie, mention bien</strong><p>Université Rennes 1.</p></div></li>
   </ul>
 </section>
 
