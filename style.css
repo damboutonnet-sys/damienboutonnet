@@ -141,3 +141,10 @@ header { margin-bottom: 1rem; }
 footer { margin-top: 6rem; padding-top: 1.25rem; border-top: 1px solid var(--ink); font-size: 0.88rem; color: var(--soft); }
 footer p { margin: 0; }
 @media (min-width: 60rem) { .titles { margin-left: 15rem; } }
+
+/* Fiche technique d'un spectacle */
+.credits-list { margin: 0 0 2rem; padding: 0; max-width: 40rem; }
+.credits-list div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 1rem; padding: 0.5rem 0; border-top: 1px solid var(--line); }
+.credits-list dt { color: var(--faint); font-size: 0.88rem; padding-top: 0.1rem; }
+.credits-list dd { margin: 0; }
+@media (max-width: 30rem) { .credits-list div { grid-template-columns: 1fr; gap: 0; } }
